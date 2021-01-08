@@ -8,7 +8,9 @@ export default function Home() {
       <Head>
         <title>{webTitle}トップページ</title>
       </Head>
-      <h1>Top Page</h1>
+      <main>
+        <h1>Top Page</h1>
+      </main>
     </>
   )
 }
