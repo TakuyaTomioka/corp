@@ -2,13 +2,13 @@ import Head from 'next/head';
 // variables
 import { webTitle } from '../../util';
 
-export default function Article() {
+export default function Service() {
   return (
     <>
       <Head>
-        <title>{webTitle}運営</title>
+        <title>{webTitle}事業紹介</title>
       </Head>
-      <h1>About Page</h1>
+      <h1>サービス</h1>
     </>
   )
 }

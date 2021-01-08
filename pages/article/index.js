@@ -6,9 +6,9 @@ export default function Article() {
   return (
     <>
       <Head>
-        <title>{webTitle}運営</title>
+        <title>{webTitle}記事</title>
       </Head>
-      <h1>About Page</h1>
+      <h1>記事</h1>
     </>
   )
 }

@@ -29,7 +29,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/services" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/service" ? "100%" : "0%" }}
           />
         </li>
         <li>
