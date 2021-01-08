@@ -1,3 +1,7 @@
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLightbulb, faNewspaper } from "@fortawesome/free-regular-svg-icons";
+import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 // Styles
 import { device } from '../components/MediaQuery';
 import styled from 'styled-components';
@@ -25,6 +29,7 @@ const Nav = () => {
       </Link>
       <Menu>
         <li>
+          <FontAwesomeIcon icon={faLightbulb} />
           <Link href="/service"><a>ちょっと解決</a></Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -33,6 +38,7 @@ const Nav = () => {
           />
         </li>
         <li>
+          <FontAwesomeIcon icon={faNewspaper} />
           <Link href="/article"><a>ちょっと知る</a></Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -41,6 +47,7 @@ const Nav = () => {
           />
         </li>
         <li>
+          <FontAwesomeIcon icon={faUserEdit} />
           <Link href="/about"><a>ちょっと誰？</a></Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -49,6 +56,7 @@ const Nav = () => {
           />
         </li>
         <li>
+          <FontAwesomeIcon icon={faEnvelope} />
           <Link href="/contact"><a>ちょっと相談</a></Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -64,9 +72,7 @@ const Nav = () => {
 const StyledNav = styled.nav`
   padding: 20px 40px;
   /* background: #66a1ce; */
-  margin: 0 auto;
   max-width: 1440px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,6 +104,9 @@ const Menu = styled.ul`
     font-family: 'M PLUS 1p', sans-serif;
     &:nth-child(n+1){
       padding-left: 30px;
+    }
+    a{
+      padding-left: 5px;
     }
   }
 `;
