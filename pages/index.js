@@ -1,16 +1,14 @@
-import styled from 'styled-components';
+import Head from 'next/head';
+// variables
+import { webTitle } from '../util';
 
 export default function Home() {
   return (
-    <StyledHome>
-      <p>Hello World</p>
-    </StyledHome>
+    <>
+      <Head>
+        <title>{webTitle}トップページ</title>
+      </Head>
+      <h1>Top Page</h1>
+    </>
   )
 }
-
-const StyledHome = styled.div`
-  height: 100vh;
-  width: 80%;
-  margin: 0 auto;
-  background: rgba(0,0,0, 0.2);
-`;
