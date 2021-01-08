@@ -1,10 +1,13 @@
 // Styles
 import { device } from '../components/MediaQuery';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import Link from 'next/link'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Nav = () => {
+  const { pathname } = useRouter();
   return (
     <StyledNav>
       <Link href="/">
@@ -21,18 +24,46 @@ const Nav = () => {
         </a>
       </Link>
       <Menu>
-        <li><Link href="/service"><a>ちょっと解決</a></Link></li>
-        <li><Link href="/article"><a>ちょっと知る</a></Link></li>
-        <li><Link href="/about"><a>ちょっと誰？</a></Link></li>
-        <li><Link href="/contact"><a>ちょっと相談</a></Link></li>
+        <li>
+          <Link href="/service"><a>ちょっと解決</a></Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/services" ? "100%" : "0%" }}
+          />
+        </li>
+        <li>
+          <Link href="/article"><a>ちょっと知る</a></Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/article" ? "100%" : "0%" }}
+          />
+        </li>
+        <li>
+          <Link href="/about"><a>ちょっと誰？</a></Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/about" ? "100%" : "0%" }}
+          />
+        </li>
+        <li>
+          <Link href="/contact"><a>ちょっと相談</a></Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "100%" : "0%" }}
+          />
+        </li>
       </Menu>
     </StyledNav>
   );
 };
 
 const StyledNav = styled.nav`
-  /* padding: 20px 40px; */
-  background: #66a1ce;
+  padding: 20px 40px;
+  /* background: #66a1ce; */
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
@@ -40,10 +71,10 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   @media ${device.tablet}{
-    background: blue;
+    /* background: blue; */
   }
   @media ${device.laptopL}{
-    background: orange;
+    /* background: orange; */
   }
 `;
 
@@ -53,8 +84,9 @@ const Logo = styled.div`
   min-width: 200px;
   h1{
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     padding-left:24px;
+    font-family: 'M PLUS 1p', sans-serif;
   }
 `;
 
@@ -62,10 +94,18 @@ const Menu = styled.ul`
   display: flex;
   li{
     font-size: 18px;
+    font-weight: 500;
+    font-family: 'M PLUS 1p', sans-serif;
     &:nth-child(n+1){
       padding-left: 30px;
     }
   }
+`;
+
+const Line = styled(motion.div)`
+  height: 0.3rem;
+  background: #70DAB4;
+  width: 0%;
 `;
 
 export default Nav;
