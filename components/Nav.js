@@ -102,11 +102,13 @@ const Menu = styled.ul`
     font-size: 18px;
     font-weight: 500;
     font-family: 'M PLUS 1p', sans-serif;
+    color: #333;
     &:nth-child(n+1){
       padding-left: 30px;
     }
     a{
       padding-left: 5px;
+      color: #333;
     }
   }
 `;
