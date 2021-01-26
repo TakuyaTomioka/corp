@@ -25,11 +25,11 @@ export default function Home() {
 const Main = styled(motion.main)`
   position: relative;
   h1{
-    color: white;
+    color: ${color.cornField};
     font-size: ${font.lg};
     position: absolute;
     span{
-      color: ${color.main};
+      color: ${color.coralRed};
     }
     @media ${device.tablet}{
       font-size: ${font.xl};

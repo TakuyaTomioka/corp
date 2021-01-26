@@ -109,14 +109,14 @@ const Menu = styled.ul`
     }
     a{
       padding-left: 5px;
-      color: ${color.text};
+      color: ${color.mineShaft};
     }
   }
 `;
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: ${color.subDarker};
+  background: ${color.algaeGreen};
   width: 0%;
 `;
 

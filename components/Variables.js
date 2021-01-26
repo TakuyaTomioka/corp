@@ -1,11 +1,11 @@
 export const color = {
-  main: '#FF4040',
-  mainLighter: '#FF7F51',
-  mainLightest: '#6FFCF',
-  sub: '#AAF0D2',
-  subDarker: '#70DAB4',
-  subDarkest: '#3EB488',
-  text: '#333',
+  coralRed: '#FF4040',
+  coral: '#FF7F51',
+  cornField: '#F6FFCF',
+  magicMint: '#AAF0D2',
+  algaeGreen: '#70DAB4',
+  mountainMeadow: '#3EB488',
+  mineShaft: '#333',
 };
 
 export const font = {
