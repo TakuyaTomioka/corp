@@ -4,6 +4,7 @@ import { faEnvelope, faLightbulb, faNewspaper } from "@fortawesome/free-regular-
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 // Styles
 import { device } from '../components/MediaQuery';
+import { color, font } from './Variables';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Link from 'next/link'
@@ -89,7 +90,7 @@ const Logo = styled.div`
   align-items: center;
   min-width: 200px;
   h1{
-    font-size: 24px;
+    font-size: ${font.base};
     font-weight: 700;
     padding-left:24px;
     font-family: 'M PLUS 1p', sans-serif;
@@ -99,23 +100,23 @@ const Logo = styled.div`
 const Menu = styled.ul`
   display: flex;
   li{
-    font-size: 18px;
+    font-size: ${font.sm};
     font-weight: 500;
     font-family: 'M PLUS 1p', sans-serif;
-    color: #333;
+    color: ${color.text};
     &:nth-child(n+1){
       padding-left: 30px;
     }
     a{
       padding-left: 5px;
-      color: #333;
+      color: ${color.text};
     }
   }
 `;
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #70DAB4;
+  background: ${color.subDarker};
   width: 0%;
 `;
 
