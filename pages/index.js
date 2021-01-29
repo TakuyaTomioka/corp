@@ -1,13 +1,17 @@
 import Head from 'next/head';
-// variables
+import Link from 'next/link';
+// Components
+import Services from '../components/Service';
+import ServiceCard from '../components/ServiceCard';
+// Variables
 import { webTitle } from '../util';
-// Styled
 import { color, font } from '../components/Variables';
+// Styled
 import { device } from '../components/MediaQuery';
 import styled from 'styled-components';
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
-export default function Home() {
+export default function Home({ services }) {
   return (
     <>
       <Head>
@@ -16,11 +20,30 @@ export default function Home() {
       <Main>
         <h1>明日の<span>Web</span>を<br />
         もう<span>ちょっと</span>よくする</h1>
-        <img src="mv.jpg" alt="" />
+        <img src="mv.jpg" alt="Main Visual" />
       </Main>
+      <Services
+        services={services}
+      />
     </>
-  )
-}
+  );
+};
+
+export const getStaticProps = async () => {
+  const key = {
+    headers: { 'X-API-KEY': process.env.API_KEY },
+  };
+
+  const res = await fetch(process.env.ENDPOINT + '/service', key);
+
+  const data = await res.json();
+
+  return {
+    props: {
+      services: data.contents,
+    },
+  };
+};
 
 const Main = styled(motion.main)`
   position: relative;
