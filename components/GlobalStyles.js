@@ -12,18 +12,23 @@ const GlobalStyles = createGlobalStyle`
   }
   h1{
     color: #333;
+    font-family: 'M PLUS 1p', sans-serif;
   }
   h2{
     color: #333;
+    font-family: 'M PLUS 1p', sans-serif;
   }
   h3{
     color: #333;
+    font-family: 'M PLUS 1p', sans-serif;
   }
   p{
     color: #333;
+    font-family: 'M PLUS 1p', sans-serif;
   }
   li{
     list-style: none;
+    font-family: 'M PLUS 1p', sans-serif;
   }
   a{
     text-decoration: none;
