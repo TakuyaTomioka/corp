@@ -3,6 +3,7 @@ import Link from 'next/link';
 // Components
 import Services from '../components/Service';
 import ServiceCard from '../components/ServiceCard';
+import Article from '../components/Article';
 // Variables
 import { webTitle } from '../util';
 import { color, font } from '../components/Variables';
@@ -11,7 +12,7 @@ import { device } from '../components/MediaQuery';
 import styled from 'styled-components';
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
-export default function Home({ services }) {
+export default function Home({ services, articles }) {
   return (
     <>
       <Head>
@@ -25,6 +26,9 @@ export default function Home({ services }) {
       <Services
         services={services}
       />
+      <Article
+        articles={articles}
+      />
     </>
   );
 };
@@ -34,13 +38,18 @@ export const getStaticProps = async () => {
     headers: { 'X-API-KEY': process.env.API_KEY },
   };
 
+  //ちょっと解決を取得 
   const res = await fetch(process.env.ENDPOINT + '/service', key);
-
   const data = await res.json();
+
+  //ちょっと知るを取得
+  const res_article = await fetch(process.env.ENDPOINT + '/articles', key);
+  const articles = await res_article.json();
 
   return {
     props: {
       services: data.contents,
+      articles: articles.contents,
     },
   };
 };
