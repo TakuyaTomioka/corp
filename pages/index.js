@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image'
 // Components
 import Services from '../components/Service';
 import ServiceCard from '../components/ServiceCard';
@@ -20,8 +21,8 @@ export default function Home({ services, articles }) {
       </Head>
       <Main>
         <h1>明日の<span>Web</span>を<br />
-        もう<span>ちょっと</span>よくする</h1>
-        <img src="mv.jpg" alt="Main Visual" />
+          もう<span>ちょっと</span>よくする</h1>
+        <Image src="/mv.jpg" width={1440} height={985} alt="Main Visual" />
       </Main>
       <Services
         services={services}
