@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { serviceURL } from '../api';
+import { serviceURL } from '../pages/api';
 
 export const loadService = () => async (dispatch) => {
   const serviceData = await axios.get(serviceURL);
