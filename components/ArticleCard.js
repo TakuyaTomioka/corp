@@ -9,7 +9,7 @@ const BlogCard = ({ articles }) => {
   return (
     <StyledArticleCard>
       {articles.map(article => (
-        <Link href="/articles/[id]" as={`articles/${article.id}`} key={article.id}>
+        <Link href="/article/[id]" as={`article/${article.id}`} key={article.id}>
           <a>
             <h3>{article.title}</h3>
             <p>{article.body}</p>
