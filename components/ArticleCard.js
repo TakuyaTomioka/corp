@@ -12,7 +12,7 @@ const BlogCard = ({ articles }) => {
         <Link href="/article/[id]" as={`article/${article.id}`} key={article.id}>
           <a>
             <h3>{article.title}</h3>
-            <p>{article.body}</p>
+            <p>{article.description}</p>
             <p>{article.tag}</p>
             <img src={article.thumbnail.url} alt={article.title} />
           </a>
