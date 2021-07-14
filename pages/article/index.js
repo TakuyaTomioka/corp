@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { client } from '../../../libs/client';
+import { client } from '../../libs/client';
 // Components
 import Article from '../../components/Article';
 // variables
@@ -13,9 +13,9 @@ export default function ArticlePage() {
       </Head>
       <h1>記事一覧</h1>
 
-      <Article
+      {/* <Article
         articles={articles}
-      />
+      /> */}
     </>
   )
 }
@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      articles: articles.contents,
+      articles: articles.contents
     },
   };
 };
