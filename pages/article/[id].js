@@ -1,9 +1,14 @@
 import { client } from '../../libs/client';
+// Styled
+import { device } from '../../components/MediaQuery';
+import styled from 'styled-components';
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 export default function ArticlesId({ articles }) {
   return (
     <main>
       <h1>{articles.title}</h1>
+      <img src={articles.thumbnail.url} alt={articles.title} />
       <p>{articles.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
