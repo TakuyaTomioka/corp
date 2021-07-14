@@ -74,21 +74,25 @@ const StyledNav = styled.nav`
   padding: 20px 40px;
   /* background: #66a1ce; */
   max-width: 1440px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   @media ${device.tablet}{
-    /* background: blue; */
+    display: flex;
   }
   @media ${device.laptopL}{
-    /* background: orange; */
   }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  min-width: 200px;
+  min-width: 100px;
+  @media ${device.tablet}{
+    display: flex;
+  }
+  @media ${device.laptopL}{
+    min-width: 200px;
+  }
   h1{
     font-size: ${font.base};
     font-weight: 700;
@@ -98,7 +102,7 @@ const Logo = styled.div`
 `;
 
 const Menu = styled.ul`
-  display: flex;
+  display: none;
   li{
     font-size: ${font.sm};
     font-weight: 500;
@@ -111,6 +115,10 @@ const Menu = styled.ul`
       padding-left: 5px;
       color: ${color.mineShaft};
     }
+  }
+  @media ${device.tablet}{
+    display: flex;
+    font-size: ${font.lg};
   }
 `;
 
