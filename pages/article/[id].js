@@ -22,7 +22,7 @@ export default function ArticlesId({ articles }) {
 }
 
 const Main = styled.main`
-  max-width: 1440px;
+max-width: 100%;
 `;
 
 const Body = styled.div`
@@ -103,9 +103,9 @@ const Body = styled.div`
 
 const Title = styled.h1`
   display: block;
-  width: 900%;
+  width: 90%;
   margin: 0 auto;
-  margin: 30px 0;
+  padding-bottom: 30px;
   @media ${device.tablet}{
     width: 80%;
     font-size: ${font.lg};
