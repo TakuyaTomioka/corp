@@ -10,10 +10,15 @@ export const color = {
 
 export const font = {
   xs: '10px',
+  ssm: '14px',
   sm: '18px',
   base: '24px',
   lg: '36px',
   xl: '48px',
   xl2: '64px',
   xl3: '72px',
+}
+
+export const letterSpace = {
+  normal: '2px',
 }
