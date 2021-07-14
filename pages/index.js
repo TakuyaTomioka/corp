@@ -36,17 +36,6 @@ export default function Home({ services, articles }) {
 };
 
 export const getStaticProps = async () => {
-  // const key = {
-  //   headers: { 'X-API-KEY': process.env.API_KEY },
-  // };
-
-  //ちょっと解決を取得 
-  // const res = await fetch(process.env.ENDPOINT + '/service', key);
-  // const data = await res.json();
-
-  //ちょっと知るを取得
-  // const res_article = await fetch(process.env.ENDPOINT + '/articles', key);
-  // const articles = await res_article.json();
 
   const data = await client.get({ endpoint: 'service' });
   const articles = await client.get({ endpoint: 'articles' });
@@ -65,6 +54,7 @@ const Main = styled(motion.main)`
     color: ${color.cornField};
     font-size: ${font.lg};
     position: absolute;
+    z-index: 10;
     span{
       color: ${color.coralRed};
     }
@@ -78,7 +68,7 @@ const Main = styled(motion.main)`
       letter-spacing: 15px;
     }
   }
-  img{
+  /* img{
     width: 100%;
-  }
+  } */
 `;
